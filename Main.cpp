@@ -19,7 +19,9 @@ int main(int argc, char **argv){
 	machine.initialiseReflector();
 	while(getline(cin, line)){
 		for(int i = 0; i <line.length(); i++){
-			cout << machine.encodeLetter(line[i]);
+			if(line[i]>='A'&&line[i]<='Z'){
+				cout << machine.encodeLetter(line[i]);
+			}
 		}
 	}
 	machine.deallocMemmory();
