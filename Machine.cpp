@@ -1,5 +1,6 @@
 #include "Machine.h"
 #include <string>
+
 using namespace std;
 
 void Machine::initialiseRotors(int n, char **fileNames){
@@ -16,6 +17,7 @@ void Machine::initialiseReflector(){
 	mappingParts.push_back(new Reflector());
 }
 
+//encodes letter using the mappings of the elements of the machine Plugboard, Rotors, Reflector in the order P(Rot)Ref(Rot)P
 char Machine::encodeLetter(char letter){
 	for(int i = 0; i < mappingParts.size(); i++){
 		letter = mappingParts[i]->encode(letter);

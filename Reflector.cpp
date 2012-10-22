@@ -1,5 +1,6 @@
 #include "Reflector.h"
 
+
 Reflector::Reflector(){}
 
 char Reflector::encode(char letter){
